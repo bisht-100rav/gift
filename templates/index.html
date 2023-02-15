@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dear Mumbai</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+    <script
+      src="https://kit.fontawesome.com/b0f29e9bfe.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="{{url_for('static', filename='main.js')}}"></script>
+  </head>
+  <body>
+    <button id="prev-btn">
+      <i class="fas fa-arrow-circle-left"></i>
+    </button>
+
+    <!-- The Book -->
+    <div id="book" class="book">
+      <!-- Paper 1 -->
+      <div id="p1" class="paper">
+        <div class="front">
+          <div id="f1" class="front-content">
+            <img
+              class="cover-img"
+              src="{{url_for('static', filename='assets/coverimage.png')}}"
+              alt="cover"
+            />
+          </div>
+        </div>
+        <div class="back">
+          <div id="b1" class="back-content">
+            <div class="content">
+              <video width="350" height="450" controls>
+                <source
+                  src="{{url_for('static', filename='assets/tithi.mp4')}}"
+                  type="video/mp4"
+                />
+                <source src="movie.ogg" type="video/ogg" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paper 2 -->
+      <div id="p2" class="paper">
+        <div class="front">
+          <div id="f2" class="front-content">
+            <img
+              class="cover-img"
+              src="{{url_for('static', filename='assets/tuilips.png')}}"
+              alt="letter"
+            />
+          </div>
+        </div>
+        <div class="back">
+          <div id="b2" class="back-content">
+            <img
+              class="cover-img"
+              src="{{url_for('static', filename='assets/last.png')}}"
+              alt="last"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Paper 3 -->
+    </div>
+
+    <button id="next-btn">
+      <i class="fas fa-arrow-circle-right"></i>
+    </button>
+  </body>
+</html>
